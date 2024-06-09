@@ -351,6 +351,7 @@ Navega hacia la carpeta example que se encuentra dentro del proyecto
 cd ./example
 ```
 
+**Paso 3:**
 
 Ejecuta el siguiente comando para descargar las dependencias necesarias
 
@@ -358,7 +359,7 @@ Ejecuta el siguiente comando para descargar las dependencias necesarias
 flutter pub get 
 ```
 
-**Paso 3:**
+**Paso 4:**
 
 Luego ejecuta el siguiente comando para levantar la aplicación, recuerda tener un emulador disponible en tu ordenador o en su defecto un dispositivo físico conectado
 
