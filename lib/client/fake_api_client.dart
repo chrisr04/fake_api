@@ -1,4 +1,3 @@
-import 'package:fake_api/core/http/interceptors/log_interceptor.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart';
 import 'package:fake_api/core/core.dart';
@@ -34,9 +33,6 @@ class FakeApiClient {
       baseHeaders: {
         'content-type': 'application/json',
       },
-      interceptors: [
-        LogInterceptor(),
-      ],
     );
 
     final authDataSource = AuthRemoteDataSource(_httpClient);
