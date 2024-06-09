@@ -2,7 +2,7 @@ import 'package:fake_api/features/auth/auth.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fake_api/fake_api.dart';
 import 'package:mocktail/mocktail.dart';
-import 'mocks/controller_mocks.dart';
+import '../mocks/controller_mocks.dart';
 
 void main() {
   late final AuthController mockAuth;
@@ -40,7 +40,7 @@ void main() {
         );
 
         expect(
-          () async => await fakeApiClient.products.getProducts(),
+          () => fakeApiClient.products.getProducts(),
           throwsA(isA<ProductControllerException>()),
         );
       },

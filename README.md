@@ -17,19 +17,19 @@ Cuando ya no necesites utilizar Fake Api en tu aplicación puedes liberar los re
 fakeApiClient.close()
 ```
 
-**Nota:** no olvide llamar al método init(), de lo contrario al intentar acceder a los controladores recibirá un error del tipo **LateInitializationError**. Solo es necesaria una llamada y recomendamos hacerla justo despues de crear la instancia.
+**Nota:** No olvide llamar al método init(), de lo contrario al intentar acceder a los controladores recibirá un error del tipo **LateInitializationError**. Solo es necesaria una llamada y recomendamos hacerla justo despues de crear la instancia.
 
-## Features
+## Funcionalidades
 Fake Api proporciona una manera bastante sencilla de obtener información del servicio, esto se logra accediendo a los controladores (auth, products, carts, users) proporcionados por la clase FakeApiClient para cada uno de los modelos de datos que nos brinda la Api.
 
 Algunos de los metodos reciben parametros comunes que sirven para ordernar o filtrar los datos. Para facilitar su uso Fake Api proporciona la clase FakeApiParams que nos ayuda agrupando dichos parametros para configurar las llamadas.
 
 ### Parametros disponibles
 
-- **[limit]** Indica que queremos que nos retorne un numero especifico de items.
-- **[sort]** Indica como queremos que ordenados nuestros items. Por defecto Fake Api Store retorna los items en orden ascendente.
-- **[startDate]** Indica cual sera la fecha de creación mínima que deben tener los datos.
-- **[endDate]** Indica cual sera la fecha de creación máxima que deben tener los datos.
+- **[limit]** Indica qué queremos que nos retorne un numero especifico de items.
+- **[sort]** Indica cómo queremos que ordenados nuestros items. Por defecto Fake Api Store retorna los items en orden ascendente.
+- **[startDate]** Indica cuál será la fecha de creación mínima que deben tener los datos.
+- **[endDate]** Indica cuál será la fecha de creación máxima que deben tener los datos.
 
 **Nota:** En caso de que ocurra algun problema al obtener los datos se lanzará una excepción del tipo **FakeApiControllerException**.
 
@@ -368,7 +368,7 @@ flutter run
 
 ## Como probar
 
-Para realizar test utilizando Fake Api puedes utilizar el método initMocks(). Este nos permite pasarle los mocks necesarios para simular las peticiones de todos los controladores, aqui tienes un ejemplo:
+Para realizar test utilizando Fake Api proporcionamos el método initMocks(). Este nos permite pasarle los mocks necesarios para simular las peticiones de todos los controladores, aquí tienes un ejemplo utilizando mocktail:
 
 ```dart
 class MockProductController extends Mock implements ProductController {}
@@ -415,7 +415,7 @@ void main() {
         );
 
         expect(
-          () async => await fakeApiClient.products.getProducts(),
+          () => fakeApiClient.products.getProducts(),
           throwsA(isA<ProductControllerException>()),
         );
       },
