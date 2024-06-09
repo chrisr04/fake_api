@@ -25,7 +25,7 @@ class FakeApiParams {
   Map<String, dynamic> toMap() => {
         if (limit != null) 'limit': limit,
         if (sort != null) 'sort': sort!.value,
-        if (startDate != null) 'startdate': startDate,
-        if (endDate != null) 'enddate': endDate,
+        if (startDate != null) 'startdate': startDate!.toIso8601String(),
+        if (endDate != null) 'enddate': endDate!.toIso8601String(),
       };
 }

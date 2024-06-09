@@ -50,11 +50,11 @@ class CartController {
   /// [userId] It's the id from user associated to carts that we want to obtain.
   ///
   /// [params] It allows add query parameters to Fake API request. More see [FakeApiParams].
-  Future<List<CartEntity>> getCartsByUser(
+  Future<List<CartEntity>> getCartsByUserId(
     int userId, {
     FakeApiParams? params,
   }) async {
-    final failureOrCart = await _repository.getCartsByUser(
+    final failureOrCart = await _repository.getCartsByUserId(
       userId,
       params: params,
     );

@@ -40,12 +40,12 @@ class CartRepositoryImpl implements CartRepository {
   }
 
   @override
-  Future<Either<Failure, List<CartEntity>>> getCartsByUser(
+  Future<Either<Failure, List<CartEntity>>> getCartsByUserId(
     int userId, {
     FakeApiParams? params,
   }) async {
     try {
-      final carts = await _remoteDataSource.getCartsByUser(
+      final carts = await _remoteDataSource.getCartsByUserId(
         userId,
         params: params,
       );

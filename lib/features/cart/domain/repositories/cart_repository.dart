@@ -5,7 +5,7 @@ import 'package:fake_api/features/cart/domain/entities/entities.dart';
 abstract class CartRepository {
   Future<Either<Failure, List<CartEntity>>> getCarts({FakeApiParams? params});
   Future<Either<Failure, CartEntity>> getCartById(int id);
-  Future<Either<Failure, List<CartEntity>>> getCartsByUser(
+  Future<Either<Failure, List<CartEntity>>> getCartsByUserId(
     int userId, {
     FakeApiParams? params,
   });

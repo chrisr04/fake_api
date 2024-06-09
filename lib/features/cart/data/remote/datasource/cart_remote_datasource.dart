@@ -27,7 +27,7 @@ class CartRemoteDataSource {
     return cart;
   }
 
-  Future<List<CartModel>> getCartsByUser(
+  Future<List<CartModel>> getCartsByUserId(
     int userId, {
     FakeApiParams? params,
   }) async {
