@@ -10,5 +10,5 @@ class FakeApiControllerException implements Exception {
   final String message;
 
   @override
-  String toString() => '$_prefix:\n\t$message';
+  String toString() => '$_prefix: $message';
 }

@@ -5,6 +5,7 @@ class UserEntity {
   const UserEntity({
     required this.id,
     required this.name,
+    required this.username,
     required this.email,
     required this.phone,
     required this.address,
@@ -12,6 +13,7 @@ class UserEntity {
 
   final int id;
   final UserNameEntity name;
+  final String username;
   final String email;
   final String phone;
   final AddressEntity address;

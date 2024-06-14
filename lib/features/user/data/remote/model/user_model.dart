@@ -6,6 +6,7 @@ class UserModel extends UserEntity {
   UserModel({
     required super.id,
     required super.name,
+    required super.username,
     required super.email,
     required super.phone,
     required super.address,
@@ -14,6 +15,7 @@ class UserModel extends UserEntity {
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
         id: json['id'] ?? 0,
         name: UserNameModel.fromJson(json['name'] ?? {}),
+        username: json['username'] ?? '',
         email: json['email'] ?? '',
         phone: json['phone'] ?? '',
         address: AddressModel.fromJson(json['address'] ?? {}),
@@ -22,6 +24,7 @@ class UserModel extends UserEntity {
   factory UserModel.fromDomain(UserEntity user) => UserModel(
         id: user.id,
         name: user.name,
+        username: user.username,
         email: user.email,
         phone: user.phone,
         address: user.address,
@@ -29,6 +32,7 @@ class UserModel extends UserEntity {
 
   Map<String, dynamic> toMap() => {
         'name': UserNameModel.fromDomain(name).toMap(),
+        'username': username,
         'email': email,
         'phone': phone,
         'address': AddressModel.fromDomain(address).toMap(),

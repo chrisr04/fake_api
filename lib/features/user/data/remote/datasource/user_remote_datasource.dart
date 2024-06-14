@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:fake_api/fake_api.dart';
-import 'package:fake_api/features/user/data/remote/model/model.dart';
 
 class UserRemoteDataSource {
   const UserRemoteDataSource(this._http);
