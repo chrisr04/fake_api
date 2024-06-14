@@ -27,7 +27,7 @@ Algunos de los metodos reciben parametros comunes que sirven para ordernar o fil
 ### Parametros disponibles
 
 - **[limit]** Indica qué queremos que nos retorne un numero especifico de items.
-- **[sort]** Indica cómo queremos que ordenados nuestros items. Por defecto Fake Api Store retorna los items en orden ascendente.
+- **[sort]** Indica cómo queremos que esten ordenados nuestros items. Por defecto Fake Api Store retorna los items en orden ascendente.
 - **[startDate]** Indica cuál será la fecha de creación mínima que deben tener los datos.
 - **[endDate]** Indica cuál será la fecha de creación máxima que deben tener los datos.
 
