@@ -5,7 +5,7 @@ part 'server_error_exception.dart';
 part 'service_unavailable_exception.dart';
 
 class NetworkException implements Exception {
-  NetworkException(this._prefix, this.message);
+  const NetworkException(this._prefix, this.message);
 
   final String _prefix;
   final String message;

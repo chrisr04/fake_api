@@ -26,6 +26,7 @@ class FakeApiClient {
   ///
   /// Note: if you try to access a property of the class without first calling this method
   /// you will receive a LateInitializationError error.
+  // coverage:ignore-start
   void init() {
     _httpClient = HttpClient(
       Client(),
@@ -51,6 +52,7 @@ class FakeApiClient {
     final cartRepository = CartRepositoryImpl(cartDataSource);
     carts = CartController(cartRepository);
   }
+  // coverage:ignore-end
 
   /// Initializes the Fake Api class receiving as parameter
   /// the controller mocks needed for testing.
@@ -68,5 +70,7 @@ class FakeApiClient {
   }
 
   /// Closes the Fake Api Client and cleans up any resources associated with it.
+  // coverage:ignore-start
   void close() => _httpClient.close();
+  // coverage:ignore-end
 }

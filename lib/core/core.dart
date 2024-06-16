@@ -1,3 +1,3 @@
 export 'utils/utils.dart';
-export 'http/http_client.dart';
+export 'http/http.dart';
 export 'errors/errors.dart';
