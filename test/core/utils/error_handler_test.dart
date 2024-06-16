@@ -69,7 +69,7 @@ void main() {
     });
 
     test('returns NetworkException on unknown status code', () async {
-      when(() => mockResponse.statusCode).thenReturn(418); // I'm a teapot
+      when(() => mockResponse.statusCode).thenReturn(418);
       when(() => mockResponse.body).thenReturn('Unknown Error');
 
       final error = await ErrorHandler.getError(mockResponse);
