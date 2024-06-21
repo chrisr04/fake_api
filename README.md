@@ -425,3 +425,57 @@ void main() {
 }
 ```
 **Nota:** El método initMocks() solo debe usarse dentro de los test. Usarlo fuera de este contexto provocará un mensaje de advertencia por parte del analyzer.
+
+
+## Pruebas
+
+### Pruebas unitarias
+
+Las pruebas unitarias se utilizan para verificar que las funciones y métodos individuales de la aplicación funcionen correctamente de manera aislada. Esto nos ayuda a asegurar que cada parte del código haga exactamente lo que se espera.
+
+### Configuración del Entorno
+
+Para ejecutar las pruebas unitarias y de widgets, se requiere configurar el entorno de desarrollo con la siguiente dependencia:
+
+```bash
+flutter pub add flutter_test
+```
+
+### Ejecución de las Pruebas 
+
+Para ejecutar las pruebas unitarias, utilice el siguiente comando:
+
+```bash
+flutter test
+```
+
+
+## Cobertura
+
+El paquete cuenta con una cobertura del 98.6%. Si deseas ver un reporte mas detallado sigue los siguientes pasos:
+
+**Paso 1:**
+
+Genera el archivo lcov.info que contendrá la información de la cobertura del paquete
+
+```bash
+flutter test --coverage
+```
+
+**Paso 2:**
+
+Genera el html necesario para mostrar el reporte
+
+```bash
+genhtml coverage/lcov.info -o coverage/html
+```
+
+**Nota:** Antes de ejecutar este comando debes tener instalado en tu sistema `lcov`, de lo contrario no funcionará. En macOS puedes instalarlo con el comando `brew install lcov`, pero ten en cuenta que este proceso puede variar en otros sistemas operativos.
+
+**Paso 3:**
+
+Abre el reporte en el navegador
+
+```bash
+open coverage/html/index.html
+```
