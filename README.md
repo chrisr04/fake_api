@@ -452,7 +452,7 @@ flutter test
 
 ## Cobertura
 
-El paquete cuenta con una cobertura del 98.6%. Si deseas ver un reporte mas detallado sigue los siguientes pasos:
+El paquete cuenta con una cobertura del 100%. Si deseas ver un reporte mas detallado sigue los siguientes pasos:
 
 **Paso 1:**
 
