@@ -435,7 +435,7 @@ Las pruebas unitarias se utilizan para verificar que las funciones y métodos in
 
 ### Configuración del Entorno
 
-Para ejecutar las pruebas unitarias, se requiere configurar el entorno de desarrollo con la siguiente dependencia:
+Para realizar las pruebas unitarias, se requiere configurar el entorno de desarrollo con la siguiente dependencia:
 
 ```bash
 flutter pub add flutter_test
